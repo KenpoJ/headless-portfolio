@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Ideas for design
+Filter types of projects using skills or "categories"
+Create pages for About and Contact. We'll have to figure out how to include a form into Vue
