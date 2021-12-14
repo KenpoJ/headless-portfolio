@@ -1,6 +1,6 @@
 <template>
   <section id="education" class="hello">
-    <h1>Education</h1>
+    <h2>Education</h2>
     <div v-for="school in schools" :key="school.id">
       <h3 class="title">{{ school.title.rendered }}</h3>
       <h4 class="dates">{{ formatDate(school.acf.start_date) }} - {{ formatDate(school.acf.graduation_date) }}</h4>
@@ -13,7 +13,6 @@
 import dayjs from 'dayjs';
 
 export default {
-  el: 'education',
   name: 'Education',
   props: {
     sectionHeading: String
@@ -45,11 +44,25 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin-bottom:  0;
+<style lang="scss" scoped>
+@import '@/scss/global.scss';
+
+h2 {
+  // The :after is the main dark colored heading
+  margin: 2rem 0 1rem;
+  padding: 1rem 0 1rem 1rem;
+  position: relative;
+  font-size: 2rem;
+  color: $light;
+
+  &:after {
+    content: 'Education';
+    position: absolute;
+    top: .1em;
+    left: 0;
+    z-index: 1;
+    color: $dark;
+  }
 }
-h4 {
-  margin:  0 0 .3rem 0;
-}
+
 </style>

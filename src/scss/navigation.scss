@@ -1,0 +1,39 @@
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background: rgba(41, 41, 41, .7);
+
+  .reverse {
+    .nav-link {
+      color: $dark;
+    }
+  }
+}
+nav .container {
+  display:  flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 801px) {
+    justify-content: flex-end;
+  }
+}
+.nav-item {
+  padding: 1rem;
+  @include border-radiuses(50%, 50%, 50%, 50%);
+  @include transition();
+
+  &:hover {
+    background: lighten($dark, 20%);
+  }
+
+  @media screen and (min-width: 801px) {
+    padding: 1rem 2rem 2.5rem 2rem;
+    @include border-radiuses(0, 0, 50%, 50%);
+  }
+}
+.nav-link {
+  color:  $light;
+}

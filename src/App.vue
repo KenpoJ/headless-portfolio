@@ -1,32 +1,50 @@
 <template>
   <div id="main" class="content">
+    <Nav />
+    <Hero msg="Hi! My name is Jason and I'm a Web Developer!" />
 
-    <Hero msg="This is the Hero Area" />
+    <div class="container content-container">
+      <Education />
+      <Positions />
+      <Projects />
+    </div>
 
-    <Education />
-    <Positions />
+    <Footer />
+
   </div>
 </template>
 
 <script>
+import Nav from './components/Nav.vue'
 import Hero from './components/Hero.vue'
 import Education from './components/Education.vue'
 import Positions from './components/Positions.vue'
+import Projects from './components/Projects.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
+    Nav,
     Hero,
     Education,
-    Positions
+    Positions,
+    Projects,
+    Footer,
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `
+          @import "@/scss/variables.scss";
+          @import "@/scss/mixins.scss";
+        `
+      }
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import "@/scss/global.scss";
 </style>

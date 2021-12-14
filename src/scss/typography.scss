@@ -1,0 +1,18 @@
+body {
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.3em;
+  color: $dark;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bevan', cursive;
+}
+h1 {
+  font-size: 2rem;
+  color: $medium;
+}
+
+ul {
+  padding-left: 2rem;
+  list-style-type: circle;
+}

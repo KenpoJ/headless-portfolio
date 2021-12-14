@@ -1,0 +1,15 @@
+@mixin transition {
+    transition: all .2s ease;
+}
+
+@mixin border-radius {
+    border-radius: 5px;
+}
+
+@mixin border-radiuses($tl, $tr, $br, $bl) {
+    border-radius: $tl $tr $br $bl;
+}
+
+@mixin box-shadow {
+    box-shadow: 2px 2px 15px 5px rgba(0,0,0,.1);
+}

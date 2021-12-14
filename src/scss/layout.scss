@@ -1,0 +1,23 @@
+body {
+  background: white;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  @media screen and (max-width: 500px) {
+    gap: 3rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 92%;
+  max-width: 1160px;
+}
+.content-container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
