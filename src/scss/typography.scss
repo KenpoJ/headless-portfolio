@@ -11,6 +11,26 @@ h1 {
   font-size: 2rem;
   color: $medium;
 }
+h2 {
+  margin: 2rem 0 3rem;
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  color: $dark;
+
+  &:after {
+    content: 'Work History';
+    padding: .4rem 0 1rem .4rem;
+    position: absolute;
+    top: .1em;
+    left: 0;
+    z-index: -1;
+    color: $light;
+  }
+}
+h3 {
+  line-height: 1.2em;
+}
 
 ul {
   padding-left: 2rem;
